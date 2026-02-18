@@ -1,0 +1,9 @@
+<b> Default STRATEGY </b>
+<p>heavy-parent works!</p>
+<button (click)="updateOne()">Update One</button>
+<button (click)="updateAll()">Update All</button>
+
+<div class="grid">
+    <app-heavy *ngFor="let item of items; trackBy: trackByIndex" [inputData]="item">
+    </app-heavy>
+</div>
