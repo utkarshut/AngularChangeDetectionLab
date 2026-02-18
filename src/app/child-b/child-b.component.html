@@ -1,0 +1,8 @@
+<div style="border:1px solid red; padding:10px; margin-top:10px;">
+    <h4>Child B (OnPush)</h4>
+    {{ data.text }}
+     <p>{{ computed }}</p>
+     <p>From Signal{{ count() }}</p>
+     <p>Total from Signal {{total()}}</p>
+<button (click)="increment()">+</button>
+</div>

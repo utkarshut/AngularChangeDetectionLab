@@ -1,0 +1,26 @@
+<h3>Parent (Default)</h3>
+
+<div>
+    <button (click)="updateA()">Update A (New Ref)</button>
+</div>
+<br />
+<div>
+    <button (click)="mutateA()">Mutate A</button>
+</div>
+<br />
+<div>
+    <button (click)="simulateExternalUpdate()"> markForCheck B</button>
+</div>
+<br />
+<div>
+    <button (click)="setTimeout()">setTimeout B</button>
+</div>
+<br />
+<app-child-a [data]="messageA" (notify)="handleEvent($event)">
+</app-child-a>
+
+<app-child-b [data]="messageB">
+</app-child-b>
+
+<app-child-c [data]="messageC"></app-child-c>
+<app-child-d [data]="messageD"></app-child-d>
