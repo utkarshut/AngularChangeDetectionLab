@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HeavyComponent } from '../heavy/heavy.component';
 
 @Component({
   selector: 'app-heavy-parent',
   standalone: true,
-  imports: [HeavyComponent,CommonModule],
+  imports: [HeavyComponent],
   templateUrl: './heavy-parent.component.html',
   styleUrl: './heavy-parent.component.scss'
   //,changeDetection: ChangeDetectionStrategy.OnPush
@@ -24,7 +24,7 @@ export class HeavyParentComponent {
     this.items = this.items.map((_, i) => 'Updated ' + i);
   }
 
-  trackByIndex(index: number) {
+  trackByIndex(index: number, item:any) {
     return index;
   }
 }

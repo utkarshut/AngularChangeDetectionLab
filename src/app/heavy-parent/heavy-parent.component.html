@@ -4,6 +4,8 @@
 <button (click)="updateAll()">Update All</button>
 
 <div class="grid">
-    <app-heavy *ngFor="let item of items; trackBy: trackByIndex" [inputData]="item">
+  @for (item of items; track trackByIndex($index, item)) {
+    <app-heavy [inputData]="item">
     </app-heavy>
+  }
 </div>
